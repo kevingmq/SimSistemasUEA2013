@@ -61,13 +61,13 @@ public class System {
 		massaDadosNormalTEC = new ArrayList<Integer>();
 		massaDadosNormalTS = new ArrayList<Integer>();
 		
-		//objGeradorTEC = new est.GeradorDistFreq("TEC", 10000, 5, 10);
-		//objGeradorTEC.GerarDistribuicaoFrequencia();
+		objGeradorTEC = new est.GeradorDistFreq("TEC", 10000, 5, 10);
+		objGeradorTEC.GerarDistribuicaoFrequencia();
 
-		//objGeradorTS = new est.GeradorDistFreq("TS", 10000, 4, 4);
-		//objGeradorTS.GerarDistribuicaoFrequencia();
+		objGeradorTS = new est.GeradorDistFreq("TS", 10000, 4, 4);
+		objGeradorTS.GerarDistribuicaoFrequencia();
 
-		MONTECARLO = false;
+		MONTECARLO = true;
 		carregarMassa = true;
 		for (int q = 1; q <= NUMEROSIMULACOES; q++) {
 			vPost = new Posto(q, NUMEROMAQUINASMAX);

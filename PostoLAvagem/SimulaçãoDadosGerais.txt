@@ -1,0 +1,6 @@
+Total Media Entre Chegadas de carros: 21.433332
+Total Media Carros Atendidos: 21.1
+Total Media Carros Nao Atendidos: 0.0
+Total Media de Chegadas: NaN
+Total Media de Serviço: 7.7
+Total Media de Espera: NaN
