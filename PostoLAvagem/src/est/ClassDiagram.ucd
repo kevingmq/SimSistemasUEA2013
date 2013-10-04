@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" name="ClassDiagram" size="821,369" id="est" metadata="uml2-1.0" initialized="true" tag="1000" key="32303037303533312D3130303020506F73746F4C41766167656D2F4B6576696E676D71">
-  <children xsi:type="editmodel:ClassEditModel" name="GeradorDistFreq" location="68,42" size="191,157" id="est/GeradorDistFreq" runTimeClassModel="aMPLITUDE,GeradorDistFreq(Ljava.lang.String;III),nUMCLASSES,mAXPOPULACAO,GerarDistribuicaoFrequencia(),type">
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" name="ClassDiagram" size="821,369" id="est" metadata="uml2-1.0" initialized="true" scrolledY="53" tag="1000" key="32303037303533312D3130303020506F73746F4C41766167656D2F4B6576696E676D71">
+  <children xsi:type="editmodel:ClassEditModel" name="GeradorDistFreq" location="68,42" size="191,175" id="est/GeradorDistFreq" runTimeClassModel="aMPLITUDE,teste(Ljava.lang.String;),GeradorDistFreq(Ljava.lang.String;III),nUMCLASSES,GeradorDistFreq(Ljava.lang.String;IIILjava.util.ArrayList;),mAXPOPULACAO,GerarDistribuicaoFrequencia(),type">
     <children xsi:type="editmodel:CompartmentEditModel" size="123,72">
       <children xsi:type="editmodel:AttributeEditModel" name="mAXPOPULACAO" id="est/GeradorDistFreq#mAXPOPULACAO"/>
       <children xsi:type="editmodel:AttributeEditModel" name="nUMCLASSES" id="est/GeradorDistFreq#nUMCLASSES"/>
       <children xsi:type="editmodel:AttributeEditModel" name="type" id="est/GeradorDistFreq#type"/>
       <children xsi:type="editmodel:AttributeEditModel" name="aMPLITUDE" id="est/GeradorDistFreq#aMPLITUDE"/>
     </children>
-    <children xsi:type="editmodel:CompartmentEditModel" size="168,36">
+    <children xsi:type="editmodel:CompartmentEditModel" size="168,54">
       <children xsi:type="editmodel:MethodEditModel" name="GerarDistribuicaoFrequencia" id="est/GeradorDistFreq#GerarDistribuicaoFrequencia()"/>
       <children xsi:type="editmodel:MethodEditModel" name="GeradorDistFreq" id="est/GeradorDistFreq#GeradorDistFreq(Ljava.lang.String;III)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="teste" id="est/GeradorDistFreq#teste(Ljava.lang.String;)"/>
     </children>
     <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
     <sourceConnections xsi:type="editmodel:AssociationEditModel" autoLocated="true" id="est/Amostra@amostras+est/GeradorDistFreq@geradorDistFreq" source="//@children.0" target="//@children.1" targetEnd="//@children.0/@sourceConnections.0/@children.1" label="//@children.0/@sourceConnections.0/@children.2" sourceEnd="//@children.0/@sourceConnections.0/@children.0" connectionRouterKind="Manhattan">
@@ -21,10 +22,10 @@
       <children xsi:type="editmodel:WireLabelEditModel" size="0,14" anchorKind="MiddlePart"/>
     </sourceConnections>
     <sourceConnections xsi:type="editmodel:AssociationEditModel" autoLocated="true" id="est/Classe@classes+est/GeradorDistFreq@geradorDistFreq" source="//@children.0" target="//@children.2" targetEnd="//@children.0/@sourceConnections.1/@children.1" label="//@children.0/@sourceConnections.1/@children.2" sourceEnd="//@children.0/@sourceConnections.1/@children.0" connectionRouterKind="Manhattan">
-      <children xsi:type="editmodel:AssociationEndEditModel" name="geradorDistFreq" location="191,153" id="est/Classe@classes+est/GeradorDistFreq@geradorDistFreq|est/GeradorDistFreq#geradorDistFreq" attachSource="true"/>
-      <children xsi:type="editmodel:AssociationEndEditModel" name="classes" location="0,3" id="est/Classe@classes+est/GeradorDistFreq@geradorDistFreq|est/Classe#classes" multiplicityLabel="//@children.0/@sourceConnections.1/@children.1/@children.1" roleLabel="//@children.0/@sourceConnections.1/@children.1/@children.0" navigable="true" orderingKind="1">
-        <children xsi:type="editmodel:LabelEditModel" name=" - classes" location="330,174" size="48,14" anchorKind="LastPart"/>
-        <children xsi:type="editmodel:LabelEditModel" name="*" location="374,202" size="4,14" anchorKind="LastPart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" name="geradorDistFreq" location="191,162" id="est/Classe@classes+est/GeradorDistFreq@geradorDistFreq|est/GeradorDistFreq#geradorDistFreq" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" name="classes" location="0,12" id="est/Classe@classes+est/GeradorDistFreq@geradorDistFreq|est/Classe#classes" multiplicityLabel="//@children.0/@sourceConnections.1/@children.1/@children.1" roleLabel="//@children.0/@sourceConnections.1/@children.1/@children.0" navigable="true" orderingKind="1">
+        <children xsi:type="editmodel:LabelEditModel" name=" - classes" location="330,183" size="48,14" anchorKind="LastPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name="*" location="374,211" size="4,14" anchorKind="LastPart"/>
       </children>
       <children xsi:type="editmodel:WireLabelEditModel" size="0,14" anchorKind="MiddlePart"/>
     </sourceConnections>

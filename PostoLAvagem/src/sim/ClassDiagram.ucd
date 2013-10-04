@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" name="ClassDiagram" size="1047,738" id="sim" metadata="uml2-1.0" initialized="true" scrolledY="162" tag="1000" key="32303037303533312D3130303020506F73746F4C41766167656D2F4B6576696E676D71">
-  <children xsi:type="editmodel:ClassEditModel" name="System" location="30,14" size="221,301" id="sim/System" runTimeClassModel="main([Ljava.lang.String;),tempoTotalMedioDeChegadas,vPost,mAXCARROSFILA,Simular(I),quantTotalCarrosAtendidos,objGeradorTEC,tempoDeSimulacao,getTempoLavagem(),quantTotalCarrosNaoAtendidos,numMaquinasLavar,tempoTotalMedioDeEspera,objGeradorTS,getTempoChegada(),tempoTotalMedioDeAtendimento,quantTotalCarrosChegaram">
-    <children xsi:type="editmodel:CompartmentEditModel" size="198,198">
+  <children xsi:type="editmodel:ClassEditModel" name="System" location="30,14" size="252,373" id="sim/System" runTimeClassModel="main([Ljava.lang.String;),tempoTotalMedioDeChegadas,g,massaDadosNormalTEC,vPost,mAXCARROSFILA,Simular(I),quantTotalCarrosAtendidos,objGeradorTEC,tempoDeSimulacao,carregarMassa,getTempoLavagem(),quantTotalCarrosNaoAtendidos,numMaquinasLavar,tempoTotalMedioDeEspera,objGeradorTS,massaDadosNormalTS,getTempoChegada(),tempoTotalMedioDeAtendimento,quantTotalCarrosChegaram">
+    <children xsi:type="editmodel:CompartmentEditModel" size="229,270">
       <children xsi:type="editmodel:AttributeEditModel" name="numMaquinasLavar" id="sim/System#numMaquinasLavar"/>
       <children xsi:type="editmodel:AttributeEditModel" name="vPost" id="sim/System#vPost"/>
       <children xsi:type="editmodel:AttributeEditModel" name="mAXCARROSFILA" id="sim/System#mAXCARROSFILA"/>
@@ -13,6 +13,10 @@
       <children xsi:type="editmodel:AttributeEditModel" name="tempoDeSimulacao" id="sim/System#tempoDeSimulacao"/>
       <children xsi:type="editmodel:AttributeEditModel" name="tempoTotalMedioDeEspera" id="sim/System#tempoTotalMedioDeEspera"/>
       <children xsi:type="editmodel:AttributeEditModel" name="objGeradorTS" id="sim/System#objGeradorTS"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="massaDadosNormalTS" id="sim/System#massaDadosNormalTS"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="carregarMassa" id="sim/System#carregarMassa"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="massaDadosNormalTEC" id="sim/System#massaDadosNormalTEC"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="g" id="sim/System#g"/>
     </children>
     <children xsi:type="editmodel:CompartmentEditModel" size="120,54">
       <children xsi:type="editmodel:MethodEditModel" name="Simular" id="sim/System#Simular(I)"/>
@@ -84,8 +88,8 @@
     <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
     <sourceConnections xsi:type="editmodel:AssociationEditModel" autoLocated="true" id="sim/Fila@fila+sim/Carro@filaEspera" source="//@children.2" target="//@children.3" targetEnd="//@children.2/@sourceConnections.0/@children.1" label="//@children.2/@sourceConnections.0/@children.2" sourceEnd="//@children.2/@sourceConnections.0/@children.0" connectionRouterKind="Manhattan">
       <children xsi:type="editmodel:AssociationEndEditModel" name="fila" location="117,87" id="sim/Fila@fila+sim/Carro@filaEspera|sim/Fila#fila" attachSource="true" multiplicityLabel="//@children.2/@sourceConnections.0/@children.0/@children.1" roleLabel="//@children.2/@sourceConnections.0/@children.0/@children.0" navigable="true">
-        <children xsi:type="editmodel:LabelEditModel" name=" - fila" location="169,429" size="24,14" anchorKind="FirstPart"/>
-        <children xsi:type="editmodel:LabelEditModel" name="0..1" location="169,457" size="18,14" anchorKind="FirstPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name=" - fila" location="169,488" size="24,14" anchorKind="FirstPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name="0..1" location="169,460" size="18,14" anchorKind="FirstPart"/>
       </children>
       <children xsi:type="editmodel:AssociationEndEditModel" name="filaEspera" location="0,87" id="sim/Fila@fila+sim/Carro@filaEspera|sim/Carro#filaEspera" multiplicityLabel="//@children.2/@sourceConnections.0/@children.1/@children.1" roleLabel="//@children.2/@sourceConnections.0/@children.1/@children.0" navigable="true">
         <children xsi:type="editmodel:LabelEditModel" name=" + filaEspera" location="503,429" size="60,14" anchorKind="LastPart"/>
@@ -95,8 +99,8 @@
     </sourceConnections>
     <sourceConnections xsi:type="editmodel:AssociationEditModel" autoLocated="true" id="sim/Fila@fila+sim/Posto@posto" source="//@children.2" target="//@children.1" targetEnd="//@children.2/@sourceConnections.1/@children.1" label="//@children.2/@sourceConnections.1/@children.2" sourceEnd="//@children.2/@sourceConnections.1/@children.0" connectionRouterKind="Manhattan">
       <children xsi:type="editmodel:AssociationEndEditModel" name="fila" location="107,0" id="sim/Fila@fila+sim/Posto@posto|sim/Fila#fila" attachSource="true" multiplicityLabel="//@children.2/@sourceConnections.1/@children.0/@children.1" roleLabel="//@children.2/@sourceConnections.1/@children.0/@children.0" navigable="true">
-        <children xsi:type="editmodel:LabelEditModel" name=" - fila" location="121,342" size="24,14" anchorKind="FirstPart"/>
-        <children xsi:type="editmodel:LabelEditModel" name="1" location="159,342" size="6,14" anchorKind="FirstPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name=" - fila" location="121,373" size="24,14" anchorKind="FirstPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name="1" location="159,373" size="6,14" anchorKind="FirstPart"/>
       </children>
       <children xsi:type="editmodel:AssociationEndEditModel" name="posto" location="0,327" id="sim/Fila@fila+sim/Posto@posto|sim/Posto#posto"/>
       <children xsi:type="editmodel:WireLabelEditModel" size="0,14" anchorKind="MiddlePart"/>

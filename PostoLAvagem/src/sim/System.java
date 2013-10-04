@@ -3,9 +3,11 @@ package sim;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Random;
 
 import est.Classe;
+import est.GeradorDistFreq;
 
 public class System {
 
@@ -43,23 +45,30 @@ public class System {
 	public static int quantTotalCarrosChegaram = 0;
 	public static int quantTotalCarrosAtendidos = 0;
 	public static int quantTotalCarrosNaoAtendidos = 0;
-	public static float tempoTotalMedioDeChegadas = 0;
+	public static double tempoTotalMedioDeChegadas = 0;
 	public static float tempoTotalMedioDeAtendimento = 0;
 	public static float tempoTotalMedioDeEspera = 0;
 
 	public static est.GeradorDistFreq objGeradorTEC;
 	public static est.GeradorDistFreq objGeradorTS;
+	public static ArrayList<Integer> massaDadosNormalTEC;
+	public static ArrayList<Integer> massaDadosNormalTS;
+	public static boolean carregarMassa = false;
+	public static gna.Gerador g = new gna.Gerador();
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		massaDadosNormalTEC = new ArrayList<Integer>();
+		massaDadosNormalTS = new ArrayList<Integer>();
+		
+		//objGeradorTEC = new est.GeradorDistFreq("TEC", 10000, 5, 10);
+		//objGeradorTEC.GerarDistribuicaoFrequencia();
 
-		objGeradorTEC = new est.GeradorDistFreq("TEC", 10000, 5, 10);
-		objGeradorTEC.GerarDistribuicaoFrequencia();
+		//objGeradorTS = new est.GeradorDistFreq("TS", 10000, 4, 4);
+		//objGeradorTS.GerarDistribuicaoFrequencia();
 
-		objGeradorTS = new est.GeradorDistFreq("TS", 10000, 4, 4);
-		objGeradorTS.GerarDistribuicaoFrequencia();
-
-		MONTECARLO = true;
+		MONTECARLO = false;
+		carregarMassa = true;
 		for (int q = 1; q <= NUMEROSIMULACOES; q++) {
 			vPost = new Posto(q, NUMEROMAQUINASMAX);
 			try {
@@ -70,10 +79,16 @@ public class System {
 			}
 			vPost = null;
 		}
+		try{
+		String fileString = "SimulaçãoDadosGerais.txt";
+		File outputfile = new File(fileString);
+		FileWriter out = new FileWriter(outputfile);
+				
 		// java.lang.System.out.println("TotalCarrosChegaram: " +
 		// quantTotalCarrosChegaram);
 		float media = (float) quantTotalCarrosChegaram / NUMEROSIMULACOES;
 		java.lang.System.out.print("TotalMediaCarrosChegaram: ");
+		out.write("Total Media Entre Chegadas de carros: " + media + "\n");
 		java.lang.System.out.format("%f%n", media);
 
 		// java.lang.System.out.println("TotalCarrosAtendidos: " +
@@ -81,25 +96,40 @@ public class System {
 		media = (float) quantTotalCarrosAtendidos / NUMEROSIMULACOES;
 		java.lang.System.out.print("TotalMediaCarrosAtendidos: ");
 		java.lang.System.out.format("%f%n", media);
+		out.write("Total Media Carros Atendidos: " + media + "\n");
 
 		// java.lang.System.out.println("TotalCarrosNaoAtendidos: " +
 		// quantTotalCarrosNaoAtendidos);
 		media = (float) quantTotalCarrosNaoAtendidos / NUMEROSIMULACOES;
 		java.lang.System.out.print("TotalMediaCarrosNaoAtendidos: ");
 		java.lang.System.out.format("%f%n", media);
+		out.write("Total Media Carros Nao Atendidos: " + media + "\n");
 
 		media = (float) tempoTotalMedioDeChegadas / NUMEROSIMULACOES;
 		java.lang.System.out.print("TempoMediaDeChegadasPorSimulacao: ");
 		java.lang.System.out.format("%f%n", media);
+		out.write("Total Media de Chegadas: " + media + "\n");
 
 		media = (float) tempoTotalMedioDeAtendimento / NUMEROSIMULACOES;
 		java.lang.System.out.print("TempoMediaDeAtendimento: ");
 		java.lang.System.out.format("%f%n", media);
+		out.write("Total Media de Serviço: " + media + "\n");
+		
 
 		media = (float) tempoTotalMedioDeEspera / NUMEROSIMULACOES;
 		java.lang.System.out.print("TempoMediaDeEspera: ");
 		java.lang.System.out.format("%f%n", media);
-
+		out.write("Total Media de Espera: " + media + "\n");
+		out.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		if(carregarMassa){
+		GeradorDistFreq cenario1TEC = new GeradorDistFreq("TEC", massaDadosNormalTEC.size(), 5, 10,massaDadosNormalTEC);
+		GeradorDistFreq cenario1TS = new GeradorDistFreq("TS", massaDadosNormalTS.size(), 4, 4,massaDadosNormalTS);
+		cenario1TEC.teste("OUT");
+		cenario1TS.teste("OUT");
+		}
 	}
 
 	/**
@@ -185,6 +215,9 @@ public class System {
 					Random r = new Random();
 					int i1 = r.nextInt(MAXTIMECHEGADA - MINTIMECHEGADA)
 							+ MINTIMECHEGADA + 1;
+					if(carregarMassa){
+						massaDadosNormalTEC.add(i1);
+					}
 					return i1;
 				} else {
 					return TEMPODECHEGADA;
@@ -216,12 +249,16 @@ public class System {
 				throw new IllegalArgumentException("MODO DIA invalido!");
 			}
 		} else {
-			Random rMonteCarlo = new Random();
+			//Random rMonteCarlo = new Random();
 			float r = 0;
-			r = rMonteCarlo.nextFloat();
+			///r = rMonteCarlo.nextFloat();
+			r = (float)g.NextPosicao();
 			float min = 0.0f;
 			for (Classe c : objGeradorTEC.getClasses()){
 				if(min <= r && r < c.getProbAcomulada()){
+					if(carregarMassa){
+						massaDadosNormalTEC.add(c.getPontoMedio());
+					}
 					return c.getPontoMedio();
 				}else{
 					min = c.getProbAcomulada();
@@ -239,17 +276,25 @@ public class System {
 				Random r = new Random();
 				int i1 = r.nextInt(MAXTIMELAVAGEM - MINTIMELAVAGEM)
 						+ MINTIMELAVAGEM + 1;
+				if(carregarMassa){
+					massaDadosNormalTS.add(i1);
+				}
 				return i1;
 			} else {
 				return TEMPODELAVAGEM;
 			}
 		} else {
-			Random rMonteCarlo = new Random();
+			//Random rMonteCarlo = new Random();
+			
 			float r = 0;
-			r = rMonteCarlo.nextFloat();
+			//r = rMonteCarlo.nextFloat();
+			r = (float)g.NextPosicao();
 			float min = 0.0f;
 			for (Classe c : objGeradorTS.getClasses()){
 				if(min <= r && r < c.getProbAcomulada()){
+					if(carregarMassa){
+						massaDadosNormalTS.add(c.getPontoMedio());
+					}
 					return c.getPontoMedio();
 				}else{
 					min = c.getProbAcomulada();

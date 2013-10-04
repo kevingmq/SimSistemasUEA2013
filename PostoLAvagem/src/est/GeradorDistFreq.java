@@ -25,6 +25,25 @@ public class GeradorDistFreq {
 		}
 	}
 
+	public GeradorDistFreq(String type_p, int maxp, int numclasses, int amplitude,
+			ArrayList<Integer> massaDadosNormalTEC) {
+		MAXPOPULACAO = maxp;
+		NUMCLASSES = numclasses;
+		AMPLITUDE = amplitude;	
+		type = type_p;
+		amostras = new ArrayList<Amostra>();
+		classes = new ArrayList<Classe>();
+		for(int i = 1; i<=NUMCLASSES;i++){
+			classes.add(new Classe(i, AMPLITUDE));
+		}
+		int id = 0;
+		for(Integer i:massaDadosNormalTEC){
+			amostras.add(new Amostra(id, i.intValue()));
+			id++;
+		}
+		
+	}
+
 	/**
 			 */
 	public Object GerarDistribuicaoFrequencia() {
@@ -47,6 +66,11 @@ public class GeradorDistFreq {
 		}
 		
 		//Polulacao gerada
+		teste("IN");
+		return classes.clone();
+	}
+
+	public void teste(String t) {
 		for (Amostra a : amostras) {
 			for (Classe c : classes) {
 				if(c.IsMyClass(a.getValue())){
@@ -63,7 +87,7 @@ public class GeradorDistFreq {
 		}
 		
 		try {
-		File outputfile = new File("Frequencia"+type+".txt"); // Cria o arquivo da tabela de saída
+		File outputfile = new File("Frequencia"+type+ t + ".txt"); // Cria o arquivo da tabela de saída
 		 FileWriter out = new FileWriter(outputfile);
 		 
 			out.write(" Classe ID  | Frequencia | Prop.Relatica | Prob.Acom | Ponto.Medio \r\n");
@@ -81,7 +105,6 @@ public class GeradorDistFreq {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-		return classes.clone();
 	}
 
 	/**
