@@ -45,7 +45,7 @@ public class MaquinaLavar implements Time {
 
 	/**
 		 */
-		public void Run(){
+		public void Run(int tempoRelogio){
 			
 			if(statusMaquina == LIVRE){ //maquina livre
 				if(posto.getFila().temCarros()){
@@ -54,6 +54,8 @@ public class MaquinaLavar implements Time {
 					statusMaquina = LAVANDO;
 					tempoLavagem = System.getTempoLavagem();
 					this.tempoTotalDeAtendimento += tempoLavagem;
+					carroLavando.setTempoDeServico(tempoLavagem);
+					carroLavando.setTempoInicioServico(tempoRelogio);
 					
 				}
 			}
@@ -63,6 +65,7 @@ public class MaquinaLavar implements Time {
 			}
 			if(tempoLavagem == 0 && statusMaquina == LAVANDO){
 				statusMaquina = LIVRE;
+				carroLavando.setTempoFinalServicoRelogio(tempoRelogio+1);
 				LiberarCarro(carroLavando);
 				this.carrosAtendidos++;
 			}

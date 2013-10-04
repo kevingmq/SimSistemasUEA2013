@@ -111,7 +111,7 @@ public class Carro implements Time{
 			statusLavagem = SUJO;
 		}
 
-		public void Run() {
+		public void Run(int tempoRelogio) {
 			
 			if(statusLavagem == Carro.SUJO){
 				tempoEspera++;
@@ -141,5 +141,175 @@ public class Carro implements Time{
 		public void setTempoEspera(int tempoEspera) {
 			this.tempoEspera = tempoEspera;
 		}
+
+		/**
+		 * @uml.property  name="tempoChegadaRelogio"
+		 */
+		private int tempoChegadaRelogio;
+
+		/**
+		 * Getter of the property <tt>tempoChegadaRelogio</tt>
+		 * @return  Returns the tempoChegadaRelogio.
+		 * @uml.property  name="tempoChegadaRelogio"
+		 */
+		public int getTempoChegadaRelogio() {
+			return tempoChegadaRelogio;
+		}
+
+		/**
+		 * Setter of the property <tt>tempoChegadaRelogio</tt>
+		 * @param tempoChegadaRelogio  The tempoChegadaRelogio to set.
+		 * @uml.property  name="tempoChegadaRelogio"
+		 */
+		public void setTempoChegadaRelogio(int tempoChegadaRelogio) {
+			this.tempoChegadaRelogio = tempoChegadaRelogio;
+		}
+
+		/**
+		 * @uml.property  name="tempoSaidaRelogio"
+		 */
+		private int tempoSaidaRelogio;
+
+		/**
+		 * Getter of the property <tt>tempoSaidaRelogio</tt>
+		 * @return  Returns the tempoSaidaRelogio.
+		 * @uml.property  name="tempoSaidaRelogio"
+		 */
+		public int getTempoSaidaRelogio() {
+			return tempoSaidaRelogio;
+		}
+
+		/**
+		 * Setter of the property <tt>tempoSaidaRelogio</tt>
+		 * @param tempoSaidaRelogio  The tempoSaidaRelogio to set.
+		 * @uml.property  name="tempoSaidaRelogio"
+		 */
+		public void setTempoSaidaRelogio(int tempoSaidaRelogio) {
+			this.tempoSaidaRelogio = tempoSaidaRelogio;
+		}
+
+		/**
+		 * @uml.property  name="tempoDeServico"
+		 */
+		private int tempoDeServico;
+
+		/**
+		 * Getter of the property <tt>tempoDeServico</tt>
+		 * @return  Returns the tempoDeServico.
+		 * @uml.property  name="tempoDeServico"
+		 */
+		public int getTempoDeServico() {
+			return tempoDeServico;
+		}
+
+		/**
+		 * Setter of the property <tt>tempoDeServico</tt>
+		 * @param tempoDeServico  The tempoDeServico to set.
+		 * @uml.property  name="tempoDeServico"
+		 */
+		public void setTempoDeServico(int tempoDeServico) {
+			this.tempoDeServico = tempoDeServico;
+		}
+
+		/**
+		 * @uml.property  name="tempoDesdeUltimaChegada"
+		 */
+		private int tempoDesdeUltimaChegada;
+
+		/**
+		 * Getter of the property <tt>tempoDesdeUltimaChegada</tt>
+		 * @return  Returns the tempoDesdeUltimaChegada.
+		 * @uml.property  name="tempoDesdeUltimaChegada"
+		 */
+		public int getTempoDesdeUltimaChegada() {
+			return tempoDesdeUltimaChegada;
+		}
+
+		/**
+		 * Setter of the property <tt>tempoDesdeUltimaChegada</tt>
+		 * @param tempoDesdeUltimaChegada  The tempoDesdeUltimaChegada to set.
+		 * @uml.property  name="tempoDesdeUltimaChegada"
+		 */
+		public void setTempoDesdeUltimaChegada(int tempoDesdeUltimaChegada) {
+			this.tempoDesdeUltimaChegada = tempoDesdeUltimaChegada;
+		}
+
+		/**
+		 * @uml.property  name="tempoInicioServico"
+		 */
+		private int tempoInicioServico;
+
+		/** 
+		 * Getter of the property <tt>tempoServico</tt>
+		 * @return  Returns the tempoServico.
+		 * @uml.property  name="tempoInicioServico"
+		 */
+		public int getTempoInicioServico() {
+			return tempoInicioServico;
+		}
+
+		/** 
+		 * Setter of the property <tt>tempoServico</tt>
+		 * @param tempoServico  The tempoServico to set.
+		 * @uml.property  name="tempoInicioServico"
+		 */
+		public void setTempoInicioServico(int tempoInicioServico) {
+			this.tempoInicioServico = tempoInicioServico;
+		}
+
+		/**
+		 * @uml.property  name="tempoFinalServicoRelogio"
+		 */
+		private int tempoFinalServicoRelogio;
+
+		/**
+		 * Getter of the property <tt>tempoFinalServicoRelogio</tt>
+		 * @return  Returns the tempoFinalServicoRelogio.
+		 * @uml.property  name="tempoFinalServicoRelogio"
+		 */
+		public int getTempoFinalServicoRelogio() {
+			return tempoFinalServicoRelogio;
+		}
+
+		/**
+		 * Setter of the property <tt>tempoFinalServicoRelogio</tt>
+		 * @param tempoFinalServicoRelogio  The tempoFinalServicoRelogio to set.
+		 * @uml.property  name="tempoFinalServicoRelogio"
+		 */
+		public void setTempoFinalServicoRelogio(int tempoFinalServicoRelogio) {
+			this.tempoFinalServicoRelogio = tempoFinalServicoRelogio;
+		}
+
+		/**
+		 * @uml.property  name="tempoNoSistema"
+		 */
+		private int tempoNoSistema;
+
+		/**
+		 * Getter of the property <tt>tempoNoSistema</tt>
+		 * @return  Returns the tempoNoSistema.
+		 * @uml.property  name="tempoNoSistema"
+		 */
+		public int getTempoNoSistema() {
+			return tempoNoSistema;
+		}
+
+		/**
+		 * Setter of the property <tt>tempoNoSistema</tt>
+		 * @param tempoNoSistema  The tempoNoSistema to set.
+		 * @uml.property  name="tempoNoSistema"
+		 */
+		public void setTempoNoSistema(int tempoNoSistema) {
+			this.tempoNoSistema = tempoNoSistema;
+		}
+
+			
+			/**
+			 */
+			public void calculaTempoNoSistema(){
+				if(this.statusLavagem == Carro.LIMPO){
+					this.tempoNoSistema = tempoFinalServicoRelogio-tempoChegadaRelogio;
+				}
+			}
 
 }

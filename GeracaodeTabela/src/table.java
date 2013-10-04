@@ -5,24 +5,49 @@ import java.util.ArrayList;
 import java.util.Random;
 
 
+/**
+ * @author  Kevingmq
+ */
 public class table {
+/**
+ * @uml.property  name="qtdeMinute"
+ */
 int qtdeMinute;
+/**
+ * @uml.property  name="qtdeCarros"
+ */
 int qtdeCarros;
 ArrayList <Integer> vetHorario = new ArrayList <Integer> ();
 
 
+/**
+ * @return
+ * @uml.property  name="qtdeCarros"
+ */
 public int getQtdeCarros() {
 	return qtdeCarros;
 }
 
+/**
+ * @param qtdeCarros
+ * @uml.property  name="qtdeCarros"
+ */
 public void setQtdeCarros(int qtdeCarros) {
 	this.qtdeCarros = qtdeCarros;
 }
 
+/**
+ * @return
+ * @uml.property  name="qtdeMinute"
+ */
 public int getQtdeMinute() {
 	return qtdeMinute;
 }
 
+/**
+ * @param qtdeMinute
+ * @uml.property  name="qtdeMinute"
+ */
 public void setQtdeMinute(int qtdeMinute) {
 	this.qtdeMinute = qtdeMinute;
 }

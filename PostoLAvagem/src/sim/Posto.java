@@ -100,19 +100,23 @@ public class Posto implements Time{
 			}
 
 			@Override
-			public void Run() {
+			public void Run(int tempoRelogio) {
 				
 				if(tempoChegada == -1){
 					tempoChegada = System.getTempoChegada();
-					//this.tempoTotalChegadas += tempoChegada;
+					tempoChegadaAnterior = tempoChegada;
+					tempoChegada--;
 				}
 				
 				if(tempoChegada == 0){
 					Carro newCarro = new Carro();
+					newCarro.setTempoDesdeUltimaChegada(tempoChegadaAnterior);
+					newCarro.setTempoChegadaRelogio(tempoRelogio);
 					listaCarros.add(newCarro);
 					CarroChegou(newCarro);
 					totalCarrosChegaram++;
 					tempoChegada = System.getTempoChegada();
+					tempoChegadaAnterior = tempoChegada;
 					this.tempoTotalChegadas += tempoChegada;
 					tempoChegada--;
 				}else{
@@ -121,10 +125,10 @@ public class Posto implements Time{
 				setCarrosNaFila(this.getFila().getFilaEspera().size());
 				
 				for (MaquinaLavar p : maquinaLavar) {
-					p.Run();
+					p.Run(tempoRelogio);
 				}
 				for (Carro c : listaCarros){
-					c.Run();
+					c.Run(tempoRelogio);
 				}
 			}
 
@@ -372,6 +376,31 @@ public class Posto implements Time{
 								}
 							}
 							return (float)tempoTotal/this.carrosAtendidos;
+						}
+
+
+						/**
+						 * @uml.property  name="tempoChegadaAnterior"
+						 */
+						private int tempoChegadaAnterior;
+
+						/**
+						 * Getter of the property <tt>tempoChegadaAnterior</tt>
+						 * @return  Returns the tempoChegadaAnterior.
+						 * @uml.property  name="tempoChegadaAnterior"
+						 */
+						public int getTempoChegadaAnterior() {
+							return tempoChegadaAnterior;
+						}
+
+						/**
+						 * Setter of the property <tt>tempoChegadaAnterior</tt>
+						 * @param tempoChegadaAnterior  The tempoChegadaAnterior to set.
+						 * @uml.property  name="tempoChegadaAnterior"
+						 */
+						public void setTempoChegadaAnterior(
+								int tempoChegadaAnterior) {
+							this.tempoChegadaAnterior = tempoChegadaAnterior;
 						}
 
 }
