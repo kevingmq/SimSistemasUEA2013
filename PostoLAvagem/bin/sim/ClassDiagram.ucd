@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" name="ClassDiagram" size="821,468" id="sim" metadata="uml2-1.0" initialized="true" tag="1000" key="32303037303533312D3130303020506F73746F4C41766167656D2F4B6576696E676D71">
+  <children xsi:type="editmodel:ClassEditModel" name="System" location="30,14" size="221,283" id="sim/System" runTimeClassModel="main([Ljava.lang.String;),tempoTotalMedioDeChegadas,vPost,mAXCARROSFILA,Simular(I),quantTotalCarrosAtendidos,tempoDeSimulacao,numMaquinasLavar,tempoTotalMedioDeEspera,quantTotalCarrosNaoAtendidos,getTempoLavagem(),tempoTotalMedioDeAtendimento,getTempoChegada(),quantTotalCarrosChegaram">
+    <children xsi:type="editmodel:CompartmentEditModel" size="198,180">
+      <children xsi:type="editmodel:AttributeEditModel" name="numMaquinasLavar" id="sim/System#numMaquinasLavar"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="vPost" id="sim/System#vPost"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="mAXCARROSFILA" id="sim/System#mAXCARROSFILA"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="quantTotalCarrosAtendidos" id="sim/System#quantTotalCarrosAtendidos"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="quantTotalCarrosNaoAtendidos" id="sim/System#quantTotalCarrosNaoAtendidos"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="quantTotalCarrosChegaram" id="sim/System#quantTotalCarrosChegaram"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="tempoTotalMedioDeChegadas" id="sim/System#tempoTotalMedioDeChegadas"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="tempoTotalMedioDeAtendimento" id="sim/System#tempoTotalMedioDeAtendimento"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="tempoDeSimulacao" id="sim/System#tempoDeSimulacao"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="tempoTotalMedioDeEspera" id="sim/System#tempoTotalMedioDeEspera"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="120,54">
+      <children xsi:type="editmodel:MethodEditModel" name="Simular" id="sim/System#Simular(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getTempoChegada" id="sim/System#getTempoChegada()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getTempoLavagem" id="sim/System#getTempoLavagem()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.2/@sourceConnections.1" name="Posto" location="315,14" size="256,319" id="sim/Posto" runTimeClassModel="Posto(II),idPosto,getTempoMedioDeAtendimentoPorMaquina(),CarrosNaoAtendidos,CarroSaiu(Lsim.Carro;),totalCarrosChegaram,tempoChegada,carrosAtendidos,Run(),tempoTotalDeAtendimento,CarroChegou(Lsim.Carro;),getTempoMedioDeEspera(),tempoTotalChegadas,carrosNaFila,getTotalCarrosLavando()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="160,144">
+      <children xsi:type="editmodel:AttributeEditModel" name="idPosto" id="sim/Posto#idPosto"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="tempoChegada" id="sim/Posto#tempoChegada"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="carrosAtendidos" id="sim/Posto#carrosAtendidos"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="carrosNaFila" id="sim/Posto#carrosNaFila"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="CarrosNaoAtendidos" id="sim/Posto#CarrosNaoAtendidos"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="totalCarrosChegaram" id="sim/Posto#totalCarrosChegaram"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="tempoTotalChegadas" id="sim/Posto#tempoTotalChegadas"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="tempoTotalDeAtendimento" id="sim/Posto#tempoTotalDeAtendimento"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="233,126">
+      <children xsi:type="editmodel:MethodEditModel" name="CarroChegou" id="sim/Posto#CarroChegou(Lsim.Carro;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="CarroSaiu" id="sim/Posto#CarroSaiu(Lsim.Carro;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="Run" id="sim/Posto#Run(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="Posto" id="sim/Posto#Posto(II)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getTotalCarrosLavando" id="sim/Posto#getTotalCarrosLavando()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getTempoMedioDeAtendimentoPorMaquina" id="sim/Posto#getTempoMedioDeAtendimentoPorMaquina()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getTempoMedioDeEspera" id="sim/Posto#getTempoMedioDeEspera()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="sim/Time&lt;-sim/Posto" source="//@children.1" target="//@children.5" targetEnd="//@children.1/@sourceConnections.0/@children.1" sourceEnd="//@children.1/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="256,76" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,40"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:AssociationEditModel" autoLocated="true" id="sim/Posto@posto+sim/MaquinaLavar@maquinaLavar" source="//@children.1" target="//@children.4" targetEnd="//@children.1/@sourceConnections.1/@children.1" label="//@children.1/@sourceConnections.1/@children.2" sourceEnd="//@children.1/@sourceConnections.1/@children.0" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" name="posto" location="256,159" id="sim/Posto@posto+sim/MaquinaLavar@maquinaLavar|sim/Posto#posto" attachSource="true" multiplicityLabel="//@children.1/@sourceConnections.1/@children.0/@children.1" roleLabel="//@children.1/@sourceConnections.1/@children.0/@children.0" navigable="true">
+        <children xsi:type="editmodel:LabelEditModel" name=" - posto" location="578,152" size="37,14" anchorKind="FirstPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name="0..1" location="578,180" size="18,14" anchorKind="FirstPart"/>
+      </children>
+      <children xsi:type="editmodel:AssociationEndEditModel" name="maquinaLavar" location="0,123" id="sim/Posto@posto+sim/MaquinaLavar@maquinaLavar|sim/MaquinaLavar#maquinaLavar" multiplicityLabel="//@children.1/@sourceConnections.1/@children.1/@children.1" roleLabel="//@children.1/@sourceConnections.1/@children.1/@children.0" navigable="true">
+        <children xsi:type="editmodel:LabelEditModel" name=" - maquinaLavar" location="755,152" size="78,14" anchorKind="LastPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name="*" location="829,180" size="4,14" anchorKind="LastPart"/>
+      </children>
+      <children xsi:type="editmodel:WireLabelEditModel" size="0,14" anchorKind="MiddlePart"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:AssociationEditModel" name="ListaDeCarros" autoLocated="true" id="sim/Carro@listaCarros+sim/Posto@posto" source="//@children.1" target="//@children.3" targetEnd="//@children.1/@sourceConnections.2/@children.1" label="//@children.1/@sourceConnections.2/@children.2" sourceEnd="//@children.1/@sourceConnections.2/@children.0" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" name="posto" location="246,319" id="sim/Carro@listaCarros+sim/Posto@posto|sim/Posto#posto" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" name="listaCarros" location="0,10" id="sim/Carro@listaCarros+sim/Posto@posto|sim/Carro#listaCarros" multiplicityLabel="//@children.1/@sourceConnections.2/@children.1/@children.1" roleLabel="//@children.1/@sourceConnections.2/@children.1/@children.0" navigable="true">
+        <children xsi:type="editmodel:LabelEditModel" name=" - listaCarros" location="501,380" size="62,14" anchorKind="LastPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name="*" location="559,352" size="4,14" anchorKind="LastPart"/>
+      </children>
+      <children xsi:type="editmodel:WireLabelEditModel" name="ListaDeCarros" size="69,14" anchorKind="MiddlePart"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="Fila" location="45,363" size="129,175" id="sim/Fila" runTimeClassModel="maxCarros,Fila(I),temVaga(),getNextCarro(),temCarros(),entrarNaFila(Lsim.Carro;),sairFila(Lsim.Carro;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="106,18">
+      <children xsi:type="editmodel:AttributeEditModel" name="maxCarros" id="sim/Fila#maxCarros"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="94,108">
+      <children xsi:type="editmodel:MethodEditModel" name="entrarNaFila" id="sim/Fila#entrarNaFila(Lsim.Carro;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getNextCarro" id="sim/Fila#getNextCarro()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="sairFila" id="sim/Fila#sairFila(Lsim.Carro;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="temCarros" id="sim/Fila#temCarros()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="temVaga" id="sim/Fila#temVaga()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="Fila" id="sim/Fila#Fila(I)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:AssociationEditModel" autoLocated="true" id="sim/Fila@fila+sim/Carro@filaEspera" source="//@children.2" target="//@children.3" targetEnd="//@children.2/@sourceConnections.0/@children.1" label="//@children.2/@sourceConnections.0/@children.2" sourceEnd="//@children.2/@sourceConnections.0/@children.0" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" name="fila" location="129,87" id="sim/Fila@fila+sim/Carro@filaEspera|sim/Fila#fila" attachSource="true" multiplicityLabel="//@children.2/@sourceConnections.0/@children.0/@children.1" roleLabel="//@children.2/@sourceConnections.0/@children.0/@children.0" navigable="true">
+        <children xsi:type="editmodel:LabelEditModel" name=" - fila" location="181,429" size="24,14" anchorKind="FirstPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name="0..1" location="181,457" size="18,14" anchorKind="FirstPart"/>
+      </children>
+      <children xsi:type="editmodel:AssociationEndEditModel" name="filaEspera" location="0,87" id="sim/Fila@fila+sim/Carro@filaEspera|sim/Carro#filaEspera" multiplicityLabel="//@children.2/@sourceConnections.0/@children.1/@children.1" roleLabel="//@children.2/@sourceConnections.0/@children.1/@children.0" navigable="true">
+        <children xsi:type="editmodel:LabelEditModel" name=" + filaEspera" location="503,429" size="60,14" anchorKind="LastPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name="*" location="559,457" size="4,14" anchorKind="LastPart"/>
+      </children>
+      <children xsi:type="editmodel:WireLabelEditModel" size="0,14" anchorKind="MiddlePart"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:AssociationEditModel" autoLocated="true" id="sim/Fila@fila+sim/Posto@posto" source="//@children.2" target="//@children.1" targetEnd="//@children.2/@sourceConnections.1/@children.1" label="//@children.2/@sourceConnections.1/@children.2" sourceEnd="//@children.2/@sourceConnections.1/@children.0" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" name="fila" location="119,0" id="sim/Fila@fila+sim/Posto@posto|sim/Fila#fila" attachSource="true" multiplicityLabel="//@children.2/@sourceConnections.1/@children.0/@children.1" roleLabel="//@children.2/@sourceConnections.1/@children.0/@children.0" navigable="true">
+        <children xsi:type="editmodel:LabelEditModel" name=" - fila" location="133,342" size="24,14" anchorKind="FirstPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name="1" location="171,342" size="6,14" anchorKind="FirstPart"/>
+      </children>
+      <children xsi:type="editmodel:AssociationEndEditModel" name="posto" location="0,309" id="sim/Fila@fila+sim/Posto@posto|sim/Posto#posto"/>
+      <children xsi:type="editmodel:WireLabelEditModel" size="0,14" anchorKind="MiddlePart"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.2/@sourceConnections.0 //@children.1/@sourceConnections.2" name="Carro" location="570,363" size="133,211" id="sim/Carro" runTimeClassModel="Run(),Carro(),sUJO,idCarro,fOIEMBORA,tempoEspera,lIMPO,lAVANDO,statusLavagem">
+    <children xsi:type="editmodel:CompartmentEditModel" size="110,126">
+      <children xsi:type="editmodel:AttributeEditModel" name="idCarro" id="sim/Carro#idCarro"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="lAVANDO" id="sim/Carro#lAVANDO"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="lIMPO" id="sim/Carro#lIMPO"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="sUJO" id="sim/Carro#sUJO"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="statusLavagem" id="sim/Carro#statusLavagem"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="tempoEspera" id="sim/Carro#tempoEspera"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="fOIEMBORA" id="sim/Carro#fOIEMBORA"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="57,36">
+      <children xsi:type="editmodel:MethodEditModel" name="Carro" id="sim/Carro#Carro()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="Run" id="sim/Carro#Run(I)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:AssociationEditModel" autoLocated="true" id="sim/Carro@carroLavando+sim/MaquinaLavar@maquinaUtilizada" source="//@children.3" target="//@children.4" targetEnd="//@children.3/@sourceConnections.0/@children.1" label="//@children.3/@sourceConnections.0/@children.2" sourceEnd="//@children.3/@sourceConnections.0/@children.0" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" name="carroLavando" location="133,10" id="sim/Carro@carroLavando+sim/MaquinaLavar@maquinaUtilizada|sim/Carro#carroLavando" attachSource="true" multiplicityLabel="//@children.3/@sourceConnections.0/@children.0/@children.1" roleLabel="//@children.3/@sourceConnections.0/@children.0/@children.0" navigable="true">
+        <children xsi:type="editmodel:LabelEditModel" name=" - carroLavando" location="710,380" size="78,14" anchorKind="FirstPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name="0..1" location="710,352" size="18,14" anchorKind="FirstPart"/>
+      </children>
+      <children xsi:type="editmodel:AssociationEndEditModel" name="maquinaUtilizada" location="10,247" id="sim/Carro@carroLavando+sim/MaquinaLavar@maquinaUtilizada|sim/MaquinaLavar#maquinaUtilizada" multiplicityLabel="//@children.3/@sourceConnections.0/@children.1/@children.1" roleLabel="//@children.3/@sourceConnections.0/@children.1/@children.0" navigable="true">
+        <children xsi:type="editmodel:LabelEditModel" name=" + maquinaUtilizada" location="857,304" size="92,14" anchorKind="LastPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name="0..1" location="825,304" size="18,14" anchorKind="LastPart"/>
+      </children>
+      <children xsi:type="editmodel:WireLabelEditModel" size="0,14" anchorKind="MiddlePart"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="sim/Time&lt;-sim/Carro" source="//@children.3" target="//@children.5" targetEnd="//@children.3/@sourceConnections.1/@children.1" sourceEnd="//@children.3/@sourceConnections.1/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="118,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="13,81"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.1/@sourceConnections.1 //@children.3/@sourceConnections.0" name="MaquinaLavar" location="840,50" size="187,247" id="sim/MaquinaLavar" runTimeClassModel="Run(),tempoTotalDeAtendimento,tempoLavagem,MaquinaLavar(ILsim.Posto;),LiberarCarro(Lsim.Carro;),statusMaquina,idMaquinaLavar,LavarCarro(Lsim.Carro;),lAVANDO,getTempoMedioAtendimento(),lIVRE,carrosAtendidos">
+    <children xsi:type="editmodel:CompartmentEditModel" size="160,108">
+      <children xsi:type="editmodel:AttributeEditModel" name="idMaquinaLavar" id="sim/MaquinaLavar#idMaquinaLavar"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="lAVANDO" id="sim/MaquinaLavar#lAVANDO"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="lIVRE" id="sim/MaquinaLavar#lIVRE"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="statusMaquina" id="sim/MaquinaLavar#statusMaquina"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="tempoTotalDeAtendimento" id="sim/MaquinaLavar#tempoTotalDeAtendimento"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="carrosAtendidos" id="sim/MaquinaLavar#carrosAtendidos"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="164,90">
+      <children xsi:type="editmodel:MethodEditModel" name="LavarCarro" id="sim/MaquinaLavar#LavarCarro(Lsim.Carro;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="LiberarCarro" id="sim/MaquinaLavar#LiberarCarro(Lsim.Carro;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="MaquinaLavar" id="sim/MaquinaLavar#MaquinaLavar(ILsim.Posto;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="Run" id="sim/MaquinaLavar#Run(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getTempoMedioAtendimento" id="sim/MaquinaLavar#getTempoMedioAtendimento()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="sim/Time&lt;-sim/MaquinaLavar" source="//@children.4" target="//@children.5" targetEnd="//@children.4/@sourceConnections.0/@children.1" sourceEnd="//@children.4/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,40" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="78,40"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:InterfaceEditModel" targetConnections="//@children.1/@sourceConnections.0 //@children.4/@sourceConnections.0 //@children.3/@sourceConnections.1" name="Time" location="675,50" size="78,81" id="sim/Time" runTimeClassModel="Run()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="49,18">
+      <children xsi:type="editmodel:MethodEditModel" name="Run" id="sim/Time#Run(I)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <diagramOptions xsi:type="options:ClassDiagramOptions" properties="wireOptions=1;Product=eUML2" autoName="false"/>
+  <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="15,15" gridOrigin="0,0" rulerUnit="pixel" gridVisibility="false">
+    <leftRuler/>
+    <topRuler/>
+  </boardSetting>
+  <classDiagramPreferences xsi:type="editmodel:UMLClassDiagramPreference" showPopupBars="true" showConnectionHandles="true" attributeSorter="Natural" methodSorter="Natural" showClassStereotype="true" showPackageStereotype="true" showDependencyStereotype="true" showInterfaceStereotype="true" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+</editmodel:ClassDiagramEditModel>
